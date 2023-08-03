@@ -4,6 +4,7 @@
     --secodary-color: #E6B325;
     --secondary-light-color: #F6F4EB;
     --paragraphs-main-color: #61677A;
+    --light-blue-color: #749BC2;
     --black-color: #000;
     --white-color: #fff;
     --transition: all 500ms ease;
@@ -106,7 +107,7 @@ h2{
 }
 
 h3{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 h4{
@@ -118,6 +119,7 @@ h5{
 }
 
 p{
+    font-size: 1,1rem;
     line-height: 1.8;
 }
 
@@ -246,6 +248,108 @@ section.about .container p{
     font-weight: 500;
 }
 
+section.services{
+    background: var(--primary-light-color);
+}
 
+section.services .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
 
+section.services .container .service-col{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    background: var(--white-color);
+    padding: 5rem 2rem;
+    transition: transform .5s;
+    box-shadow: 0.5rem 0.5rem 0.1rem var(--paragraphs-main-color);
+}
+
+section.services .container .service-col:hover{
+    cursor: pointer;
+    transform: translateY(-0.7rem);
+}
+
+section.services .container .service-col i{
+    background: var(--primary-color);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font: 500;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+}
+
+section.services .container .service-col:nth-child(2) i{
+     background: var(--secodary-color);
+}
+
+section.services .container .service-col:nth-child(3) i{
+    background: var(--light-blue-color)
+}
+
+section.portfolio .container h1{
+    text-align: left;
+    width: 60%;
+    padding: 1rem 0 0.7rem;
+}
+
+section.portfolio .container .project-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+section.portfolio .project-col .action a{
+    color: var(--secodary-color);
+    cursor: pointer;
+    display: inline-block;
+    margin: 1rem 1rem 0 0;
+
+}
+
+section.portfolio .project-col .action a:hover{
+    text-decoration: underline;
+}
+
+section.testimonials{
+    background: var(--primary-light-color);
+    padding: 18rem 7rem;
+}
+
+section.testimonials .testimonial-row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+section.testimonials .testimonial-row .testimonial-col{
+    background: var(--white-color);
+    padding: 2rem 3rem;
+}
+
+section.testimonials .testimonial-row .testimonial-col .user{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+section.testimonials .testimonial-row .testimonial-col .user img{
+    width: 5rem;
+    border-radius: 50%;
+}
+
+section.contact{
+    background: url('./images/contact-pic.jpg');
+}
 
