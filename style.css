@@ -10,6 +10,15 @@
     --transition: all 500ms ease;
 }
 
+::-webkit-scrollbar{
+    background: var(--primary-light-color);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -144,7 +153,9 @@ section.landing{
     place-items: center;
     position: relative;
     top: 5rem;
-    background: var(--primary-color);
+    /* background: var(--primary-color); */
+    background: linear-gradient(rgba(0,0,0,0.7), var(--primary-color)),url('./images/header-img.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
     min-height: 100vh;
     padding: 0;
 }
@@ -210,8 +221,7 @@ section.landing .container .landing-info p{
 }
 
 .btn:hover{
-    background: rgb(212, 183, 15);
-    padding: 1rem 2.2rem;
+    box-shadow: 0.5rem 0.5rem 3.5rem var(--secodary-color);
 }
 
 section.landing .container .profile-pic img{
@@ -250,6 +260,7 @@ section.about .container p{
 
 section.services{
     background: var(--primary-light-color);
+    padding-bottom: 15rem;
 }
 
 section.services .container{
@@ -264,16 +275,17 @@ section.services .container{
 section.services .container .service-col{
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 2rem;
     background: var(--white-color);
-    padding: 5rem 2rem;
+    padding: 2rem 1rem;
     transition: transform .5s;
-    box-shadow: 0.5rem 0.5rem 0.1rem var(--paragraphs-main-color);
+    box-shadow: 1rem 1rem 3rem var(--paragraphs-main-color);
+    border-radius: 10%;
 }
 
 section.services .container .service-col:hover{
     cursor: pointer;
-    transform: translateY(-0.7rem);
+    transform: translateY(-1rem);
 }
 
 section.services .container .service-col i{
@@ -336,6 +348,14 @@ section.testimonials .testimonial-row{
 section.testimonials .testimonial-row .testimonial-col{
     background: var(--white-color);
     padding: 2rem 3rem;
+    box-shadow: 1rem 1rem 2rem var(--paragraphs-main-color);
+    transition: transform .5s;
+    border-radius: 10%;
+}
+
+section.testimonials .testimonial-row .testimonial-col:hover{
+    transform: translateY(-1rem);
+    cursor: pointer;
 }
 
 section.testimonials .testimonial-row .testimonial-col .user{
@@ -350,6 +370,136 @@ section.testimonials .testimonial-row .testimonial-col .user img{
 }
 
 section.contact{
-    background: url('./images/contact-pic.jpg');
+    background: url('./images/contact-pic.jpg') no-repeat center center/cover;
+    padding: 0;
+    background-attachment: fixed;
 }
 
+section.contact .overlay{
+    width: 100%;
+    height: 100%;
+    padding: 10rem 0 7rem;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+section.contact .overlay .container{
+    width: 40%;
+}
+
+section.contact .overlay .container h1{
+    color: var(--white-color);
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+section.contact .overlay .container p{
+    color: var(--white-color);
+    text-align: center;
+    padding-top: 0;
+}
+
+section.contact .overlay .container form{
+    margin: 3rem auto;
+}
+
+section.contact .overlay .container form input, section.contact .overlay .container form textarea{
+    width: 100%;
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 2rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--white-color);
+}
+
+section.contact .overlay .container form input:focus, section.contact .overlay .container form textarea:focus{
+    background: var(--white-color);
+}
+
+section.contact .overlay .container form input::placeholder, section.contact .overlay .container form textarea::placeholder{
+    color: var(--white-color);
+}
+
+section.contact .overlay .container form textarea{
+    height: 10rem;
+}
+
+section.contact .overlay .container form input.submit-button{
+    width: 30%;
+    margin: 1rem auto;
+    padding: 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+    background: var(--secodary-color);
+    border: none;
+}
+
+section.contact .overlay .container form input.submit-button:hover{
+    box-shadow: 0.5rem 0.5rem 3.5rem var(--secodary-color);
+}
+
+
+footer .container{
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+footer .container h3{
+    color: var(--primary-color);
+}
+
+footer .container ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer .container ul a{
+    color: var(--paragraphs-main-color);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+
+footer .container ul a:hover{
+    color: var(--secodary-color);
+}
+
+footer .container .socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer .container .socials i{
+    color: var(--paragraphs-main-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    background: var(--primary-light-color);
+    color: var(--primary-color);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .container .socials i:hover{
+    background: var(--secodary-color);
+    color: var(--white-color);
+}
+
+footer .copyright{
+    background: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem 1.5rem;
+    font-size: 1rem;
+}
