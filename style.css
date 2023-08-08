@@ -617,7 +617,7 @@ footer .copyright{
 
     section.landing .container{
         grid-template-columns: 1fr;
-        grid-template-rows: 20% 50%;
+        grid-template-rows: 20% 50% 10%;
         grid-gap: 6rem;
         text-align: center;
         margin: 0 auto;
@@ -627,6 +627,12 @@ footer .copyright{
         grid-row: 1;
        margin: 5rem auto 1rem;
         
+    }
+
+    section.landing .container .profile-pic img{
+        width: 94%;
+        display: block;
+        object-fit: cover;
     }
 
     section.landing .container .landing-info{

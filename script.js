@@ -44,10 +44,10 @@ const showMoreToggle = document.querySelector('.show-more-toggle');
 showMoreToggle.addEventListener('click', ()=>{
     showMoreInfo.classList.toggle('read-more');
     if (showMoreInfo.classList.contains('read-more')){
-        showMoreToggle.textContent = 'Show less';
+        showMoreToggle.textContent = "Show less";
     }
     else{
-        showMoreToggle.textContent = 'Show More';
+        showMoreToggle.textContent = "Show More";
     }
 })
 
